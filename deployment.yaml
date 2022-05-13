@@ -17,7 +17,7 @@ spec:
         app: demo3
     spec:
       containers:
-      - image: 192.168.0.216:8888/library/demo3:v1
+      - image: ${IMAGE}
         name: demo3
       restartPolicy: Always
 
