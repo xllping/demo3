@@ -7,4 +7,4 @@ build:
     COPY src src
     COPY /mnt/mvn-cache-rep/settings.xml ./
     RUN mvn package -s ./settings.xml -Dmaven.test.skip=true
-    SAVE ARTIFACT target/ /target AS LOCAL /mnt/workspace/tmp/target
+    SAVE ARTIFACT target/ /target AS LOCAL ./target
