@@ -5,6 +5,7 @@ WORKDIR /java-example
 build:
     COPY pod.xml ./
     COPY src src
-    COPY /mnt/mvn-cache-rep/settings.xml ./
-    RUN mvn package -s ./settings.xml -Dmaven.test.skip=true
+    #COPY /mnt/mvn-cache-rep/settings.xml ./
+    #RUN mvn package -s ./settings.xml -Dmaven.test.skip=true
+    RUN mvn package -Dmaven.test.skip=true
     SAVE ARTIFACT target/ /target AS LOCAL ./target
