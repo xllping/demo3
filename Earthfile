@@ -1,6 +1,5 @@
 VERSION 0.6
-FROM openjdk:11-jdk-alpine
-RUN apk add --update --no-cache maven
+FROM maven:3.8.5-openjdk-11
 WORKDIR /java-example
 
 build:
