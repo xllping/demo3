@@ -12,4 +12,4 @@ build:
     RUN pwd
     RUN ls -alth ./target
     #SAVE ARTIFACT target/ /target AS LOCAL /target
-    SAVE ARTIFACT  target/demo3-0.0.1-SNAPSHOT.jar AS LOCAL /workspace/demo3-0.0.1-SNAPSHOT.jar
+    SAVE ARTIFACT  target/ AS LOCAL /target
