@@ -7,8 +7,8 @@ build:
     COPY setting-aliyun-s.xml ./
     COPY src src
     #COPY /mnt/mvn-cache-rep/settings.xml ./
-    RUN mvn package -s ./setting-aliyun-s.xml -Dmaven.test.skip=true
-    #RUN mvn package -Dmaven.test.skip=true
+    #RUN mvn package -s ./setting-aliyun-s.xml -Dmaven.test.skip=true
+    RUN mvn package -Dmaven.test.skip=true
     RUN pwd
     RUN ls -alth ./target
     #SAVE ARTIFACT target/ /target AS LOCAL /target
