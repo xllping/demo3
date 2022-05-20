@@ -10,7 +10,7 @@ build:
     #RUN mvn -X package -s ./setting-aliyun-s.xml  -Dmaven.test.skip=true
     #RUN mvn package -Dmaven.test.skip=true
     RUN pwd
-    RUN ls -alth ./target
+    RUN ls -alth ./
     #SAVE ARTIFACT target/ /target AS LOCAL /target
     #SAVE ARTIFACT  target/ AS LOCAL /target
     SAVE ARTIFACT  setting-aliyun-s.xml AS LOCAL /target/setting-aliyun-s.xml
