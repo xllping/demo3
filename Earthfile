@@ -8,5 +8,7 @@ build:
     #COPY /mnt/mvn-cache-rep/settings.xml ./
     #RUN mvn package -s ./settings.xml -Dmaven.test.skip=true
     RUN mvn package -Dmaven.test.skip=true
-    RUN ls -alth
-    SAVE ARTIFACT target/ /target AS LOCAL /target
+    RUN pwd
+    RUN ls  -alth
+    #SAVE ARTIFACT target/ /target AS LOCAL /target
+    SAVE ARTIFACT target/demo3-0.0.1-SNAPSHOT.jar AS LOCAL /target
