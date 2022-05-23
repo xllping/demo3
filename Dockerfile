@@ -1,6 +1,6 @@
 
-#FROM 192.168.0.216:8888/library/jdk11:v1
-FROM maven:3.8.5-openjdk-11
+FROM 192.168.0.216:8888/library/jdk11:v1
+#FROM maven:3.8.5-openjdk-11
 WORKDIR /home/demo/
 ENV RUN_ENV="dev"
 ENV JAVA_OPTS=""
