@@ -13,7 +13,7 @@ build:
     RUN ls -alth ./
     #SAVE ARTIFACT target/ /target AS LOCAL /target
     #SAVE ARTIFACT  target/ AS LOCAL /target
-    SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml # AS LOCAL ./target/setting-aliyun-s.xml
+    SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml AS LOCAL ./target/setting-aliyun-s.xml
 
 docker:
     #FROM 192.168.0.216:8888/library/jdk11:v1
