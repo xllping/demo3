@@ -16,7 +16,7 @@ build:
     SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml # AS LOCAL ./target/setting-aliyun-s.xml
 
 docker:
-    FROM 192.168.0.216:8888/library/jdk11:v1
+    #FROM 192.168.0.216:8888/library/jdk11:v1
     WORKDIR /home/demo/
     ENV RUN_ENV="dev"
     ENV JAVA_OPTS=""
@@ -27,4 +27,4 @@ docker:
     ENTRYPOINT [ "sh", "-c", "java $SKYWALKING_AGENT $JAVA_OPTS_INNER $JAVA_OPTS -Dspring.profiles.active=${RUN_ENV} -jar app.jar" ]
     # COPY +build/setting-aliyun-s.xml setting-aliyun-s.xml
     # ENTRYPOINT ["/java-example/bin/java-example"]
-    SAVE IMAGE demo3:latest
+    SAVE IMAGE --push --insecure 192.168.0.216:8888/library/demo3:latest
