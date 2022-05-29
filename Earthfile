@@ -17,7 +17,7 @@ build:
     RUN ls -alth /
     RUN cp -f setting-aliyun-s.xml /mid/setting-aliyun-s.xml
     # SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml # AS LOCAL ./target/setting-aliyun-s.xml
-    # SAVE ARTIFACT  Dockerfile /Dockerfile
+    SAVE ARTIFACT  Dockerfile /Dockerfile
 
 docker:
     FROM DOCKERFILE -f +build/Dockerfile +build/*
