@@ -20,8 +20,9 @@ build:
     SAVE ARTIFACT  Dockerfile /Dockerfile
 
 docker:
+    ARG image=192.168.0.216:8888/library/demo3:latest
     FROM DOCKERFILE -f +build/Dockerfile +build/*
-    SAVE IMAGE --push --insecure 192.168.0.216:8888/library/demo3:latest
+    SAVE IMAGE --push --insecure $image
     # FROM 192.168.0.216:8888/library/jdk11:v1
     # WORKDIR /home/demo/
     # ENV RUN_ENV="dev"
