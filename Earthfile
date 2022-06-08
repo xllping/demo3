@@ -12,6 +12,7 @@ build:
     #RUN mvn package -Dmaven.test.skip=true
     RUN pwd
     RUN ls -alth ./
+    RUN ls target/demo3-0.0.1-SNAPSHOT.jar
     SAVE ARTIFACT target/demo3-0.0.1-SNAPSHOT.jar /target/demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./target/demo3-0.0.1-SNAPSHOT.jar
     #SAVE ARTIFACT  target/ AS LOCAL /target
     RUN ls -alth /
