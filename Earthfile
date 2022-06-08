@@ -12,7 +12,8 @@ build:
     #RUN mvn package -Dmaven.test.skip=true
     RUN pwd
     RUN ls -alth ./
-    RUN chmod +r target
+    RUN chmod +rw target
+    RUN chmod +rw target/demo3-0.0.1-SNAPSHOT.jar
     RUN ls -alth ./
     RUN cp target/demo3-0.0.1-SNAPSHOT.jar demo3-0.0.1-SNAPSHOT.jar 
     RUN ls -alth ./
