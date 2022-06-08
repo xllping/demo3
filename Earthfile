@@ -3,27 +3,29 @@ FROM maven:3.8.5-openjdk-11
 WORKDIR /java-example
 
 build:
-    COPY pom.xml ./
-    COPY setting-aliyun-s.xml ./
-    COPY src src
-    COPY Dockerfile ./
-    #COPY /mnt/mvn-cache-rep/settings.xml ./
-    RUN mvn package -s ./setting-aliyun-s.xml  -Dmaven.test.skip=true
-    #RUN mvn package -Dmaven.test.skip=true
-    RUN pwd
+    RUN echo "test" > test.txt
+    #COPY pom.xml ./
+    #COPY setting-aliyun-s.xml ./
+    #COPY src src
+    #COPY Dockerfile ./
+    ##COPY /mnt/mvn-cache-rep/settings.xml ./
+    #RUN mvn package -s ./setting-aliyun-s.xml  -Dmaven.test.skip=true
+    ##RUN mvn package -Dmaven.test.skip=true
+    #RUN pwd
     RUN ls -alth ./
-    RUN chmod +rw target
-    RUN chmod +rw target/demo3-0.0.1-SNAPSHOT.jar
-    RUN ls -alth ./
-    RUN cp target/demo3-0.0.1-SNAPSHOT.jar demo3-0.0.1-SNAPSHOT.jar 
-    RUN ls -alth ./
-    SAVE ARTIFACT demo3-0.0.1-SNAPSHOT.jar /demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./demo3-0.0.1-SNAPSHOT.jar
+    #RUN chmod +rw target
+    #RUN chmod +rw target/demo3-0.0.1-SNAPSHOT.jar
+    #RUN ls -alth ./
+    #RUN cp target/demo3-0.0.1-SNAPSHOT.jar demo3-0.0.1-SNAPSHOT.jar 
+    #RUN ls -alth ./
+    #SAVE ARTIFACT demo3-0.0.1-SNAPSHOT.jar /demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./demo3-0.0.1-SNAPSHOT.jar
     #SAVE ARTIFACT  target/ AS LOCAL /target
-    RUN ls -alth /
-    RUN ls -alth ./
+    #RUN ls -alth /
+    #RUN ls -alth ./
     #RUN cp -f setting-aliyun-s.xml /mid/setting-aliyun-s.xml
     #SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml AS LOCAL ./target/setting-aliyun-s.xml
-    SAVE ARTIFACT  Dockerfile /Dockerfile
+    #SAVE ARTIFACT  Dockerfile /Dockerfile
+    SAVE ARTIFACT test.txt /test.txt AS LOCAL ./test.txt
 
 docker:
     ARG image=192.168.0.216:8888/library/demo3:latest
