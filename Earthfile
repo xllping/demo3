@@ -16,7 +16,7 @@ build:
     RUN ls -alth ./
     RUN cp target/demo3-0.0.1-SNAPSHOT.jar demo3-0.0.1-SNAPSHOT.jar 
     RUN ls -alth ./
-    SAVE ARTIFACT demo3-0.0.1-SNAPSHOT.jar /target/demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./demo3-0.0.1-SNAPSHOT.jar
+    SAVE ARTIFACT demo3-0.0.1-SNAPSHOT.jar /demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./demo3-0.0.1-SNAPSHOT.jar
     #SAVE ARTIFACT  target/ AS LOCAL /target
     RUN ls -alth /
     RUN ls -alth ./
