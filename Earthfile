@@ -12,11 +12,11 @@ build:
     #RUN mvn package -Dmaven.test.skip=true
     RUN pwd
     RUN ls -alth ./
-    SAVE ARTIFACT target/ /target # AS LOCAL /target
+    SAVE ARTIFACT target/ /target AS LOCAL /target
     #SAVE ARTIFACT  target/ AS LOCAL /target
     RUN ls -alth /
     #RUN cp -f setting-aliyun-s.xml /mid/setting-aliyun-s.xml
-    SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml AS LOCAL ./target/setting-aliyun-s.xml
+    #SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml AS LOCAL ./target/setting-aliyun-s.xml
     SAVE ARTIFACT  Dockerfile /Dockerfile
 
 docker:
