@@ -16,6 +16,7 @@ build:
     SAVE ARTIFACT target/demo3-0.0.1-SNAPSHOT.jar /target/demo3-0.0.1-SNAPSHOT.jar AS LOCAL ./target/demo3-0.0.1-SNAPSHOT.jar
     #SAVE ARTIFACT  target/ AS LOCAL /target
     RUN ls -alth /
+    RUN ls -alth ./
     #RUN cp -f setting-aliyun-s.xml /mid/setting-aliyun-s.xml
     #SAVE ARTIFACT  setting-aliyun-s.xml /setting-aliyun-s.xml AS LOCAL ./target/setting-aliyun-s.xml
     SAVE ARTIFACT  Dockerfile /Dockerfile
